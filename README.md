@@ -34,7 +34,7 @@ $vi ${projectDir}/conf/application.yml
 
     # write a receiving list in array form. 
     to:
-      - hr.kim@infinigru.com
+      - receiver@gmail.com
 
 
   # write servers to monitor in array form.
@@ -48,7 +48,7 @@ $vi ${projectDir}/conf/application.yml
 
       # You have to decide on one(😱only one😱) authentication method. (password or authentication key)
       # if you want to use password you have to uncomment 
-      # password: root1234
+      # password: blabla 
       authKeyPath: /home/ec2-user/blabla.pem
 ```
 ### execute startup.sh 
