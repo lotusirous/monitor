@@ -49,7 +49,7 @@ $vi ${projectDir}/conf/application.yml
       # You have to decide on one(😱only one😱) authentication method. (password or authentication key)
       # if you want to use password you have to uncomment 
       # password: root1234
-      authKeyPath: /home/ec2-user/gru-voice-prod-key.pem
+      authKeyPath: /home/ec2-user/blabla.pem
 ```
 ### execute startup.sh 
 > If you have completed all the settings above, you can execute monitoring process
