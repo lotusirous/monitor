@@ -40,10 +40,10 @@ $vi ${projectDir}/conf/application.yml
   # write servers to monitor in array form.
   servers:
     ## instance name (alias)
-    - name: prod-collector 
+    - name: production-scheduler 
       host: hostAddr
       remoteAccnt: ec2-user 
-      logPath: /collector/logs/collector.log
+      logPath: /scheduler/logs/scheduler.log
       port: 22
 
       # You have to decide on one(😱only one😱) authentication method. (password or authentication key)
