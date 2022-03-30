@@ -1,17 +1,26 @@
 
 # description
-> This is a utility for monitoring in progressing the project.
-Although there are already several existing monitoring tools, there is a multiple monitoring tools, but if the project is on, the scale is large (if you are scaled out or branching the server according to each function(service(?)))
-You will need to install the agent to monitor for each branched server.
-Multi-monitoring utility enables monitoring without having to install a separate agent on the monitoring server by adding only instance information of the server to the configuration file every time the server branches.
-Monitoring means that when a specific keyword is specified and the keyword is printed in the log, You can send the information by e-mail to receive it.
 
+> This is a multi Log Monitoring utility for in progressing a project.<br>
+> There are already exist so many Monitoring tools,<br>
+> If the scale grows of application (scale out or branching the server according to each function(service))<br>
+> You will need to install the agent to monitor for each branched server <br><br>
+> But.. Multi monitoring utility can monitor without installing agents on the server to monitor<br>
+> just adding only instance's information of the server to the configuration file
+
+
+```mermaid
+    graph TD;
+    MonitoringServer --> InstanceA
+    MonitoringServer --> InstanceB
+    MonitoringServer --> Insatnce...
+```
 
 # prerequisite 
 > If the monitored server and monitoring server are different instance,
 > You must allow port 22 on monitored server from the monitoring server.
 
-# GETTING STARTED
+# getting started
 ### Unzip the archive file(tar)
 
 ### You need to write a configuration file.
