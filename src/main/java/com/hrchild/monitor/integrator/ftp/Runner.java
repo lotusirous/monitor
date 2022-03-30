@@ -11,25 +11,25 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Runner implements CommandLineRunner {
-    Logger logger = LoggerFactory.getLogger(Runner.class);
+  Logger logger = LoggerFactory.getLogger(Runner.class);
 
-    private static final String confPath = System.getProperty("CONF_HOME");
+  private static final String confPath = System.getProperty("CONF_HOME");
 
-    @Override
-    public void run(String... args) throws Exception {
-//        logger.info("HI, I'm Runner App");
-        logger.debug("confPath:[{}]", confPath);
-        PropertyConfiguration propertyConfiguration = new PropertyConfiguration(confPath);
-        logger.debug("propertyConfiguration:[{}", propertyConfiguration);
-        MonitorConfig monitorConfig = propertyConfiguration.propertySourcesPlaceholderConfigurer();
-        logger.debug("propertySourcesPlaceholderConfigurer:[{}]", monitorConfig);
-//        logger.debug("hi,:)");
+  @Override
+  public void run(String... args) throws Exception {
+    //        logger.info("HI, I'm Runner App");
+    logger.debug("confPath:[{}]", confPath);
+    PropertyConfiguration propertyConfiguration = new PropertyConfiguration(confPath);
+    logger.debug("propertyConfiguration:[{}", propertyConfiguration);
+    MonitorConfig monitorConfig = propertyConfiguration.propertySourcesPlaceholderConfigurer();
+    logger.debug("propertySourcesPlaceholderConfigurer:[{}]", monitorConfig);
+    //        logger.debug("hi,:)");
 
-
-        for (Instance instance : monitorConfig.getServers()) {
-            WatchThread watchThread = new WatchThread(monitorConfig.getNotiKeywords(), monitorConfig.getMail(), instance);
-            logger.debug("START WATCHING : [{}]", instance.getName());
-            watchThread.start();
-        }
+    for (Instance instance : monitorConfig.getServers()) {
+      WatchThread watchThread =
+          new WatchThread(monitorConfig.getNotiKeywords(), monitorConfig.getMail(), instance);
+      logger.debug("START WATCHING : [{}]", instance.getName());
+      watchThread.start();
     }
+  }
 }

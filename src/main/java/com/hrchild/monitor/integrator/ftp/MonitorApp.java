@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Configuration;
 @SpringBootApplication
 @Configuration
 public class MonitorApp {
-    private static ApplicationContext applicationContext;
-    Logger logger = LoggerFactory.getLogger(MonitorApp.class);
-    public static void main(String[] args) {
-        SpringApplication.run(MonitorApp.class, args);
-    }
+  private static ApplicationContext applicationContext;
+  Logger logger = LoggerFactory.getLogger(MonitorApp.class);
+  public static void main(String[] args) {
+    SpringApplication.run(MonitorApp.class, args);
+  }
 }

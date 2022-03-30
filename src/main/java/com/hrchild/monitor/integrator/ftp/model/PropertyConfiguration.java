@@ -11,23 +11,24 @@ import java.io.InputStream;
 
 public class PropertyConfiguration {
 
-    Logger logger = LoggerFactory.getLogger(PropertyConfiguration.class);
-    public String confPath;
+  Logger logger = LoggerFactory.getLogger(PropertyConfiguration.class);
+  public String confPath;
 
-    public PropertyConfiguration(String confPath) {
-        this.confPath = confPath;
-    }
+  public PropertyConfiguration(String confPath) {
+    this.confPath = confPath;
+  }
 
-    /* 외부설정 프로퍼티 */
-//    public PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() throws IOException {
-    public MonitorConfig propertySourcesPlaceholderConfigurer() throws IOException {
-        logger.info("confPath:{}", confPath);
+  /* 외부설정 프로퍼티 */
+  //    public PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() throws
+  // IOException {
+  public MonitorConfig propertySourcesPlaceholderConfigurer() throws IOException {
+    logger.info("confPath:{}", confPath);
 
-        InputStream is = new FileInputStream(new File(confPath));
-        Yaml yml = new Yaml();
-        MonitorConfig monitorConfig = yml.loadAs(is, MonitorConfig.class);
-        logger.debug("monitorConfig:[{}]", monitorConfig);
+    InputStream is = new FileInputStream(new File(confPath));
+    Yaml yml = new Yaml();
+    MonitorConfig monitorConfig = yml.loadAs(is, MonitorConfig.class);
+    logger.debug("monitorConfig:[{}]", monitorConfig);
 
-        return monitorConfig;
-    }
+    return monitorConfig;
+  }
 }
