@@ -17,7 +17,7 @@
 ```
 
 # prerequisite 
-> If the monitored server and monitoring server are different instance,
+> If the monitored server and monitoring server are different instance, <br>
 > You must allow port 22 on monitored server from the monitoring server.
 
 # getting started
