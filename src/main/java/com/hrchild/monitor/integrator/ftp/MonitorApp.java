@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class MonitorApp {
   private static ApplicationContext applicationContext;
   Logger logger = LoggerFactory.getLogger(MonitorApp.class);
+
   public static void main(String[] args) {
     SpringApplication.run(MonitorApp.class, args);
   }

@@ -4,12 +4,11 @@ import com.hrchild.monitor.integrator.ftp.model.EmailUtil;
 import com.hrchild.monitor.integrator.ftp.model.Instance;
 import com.hrchild.monitor.integrator.ftp.model.Mail;
 import com.jcraft.jsch.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.io.*;
 import java.util.List;
 import java.util.Properties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 // @Service
 // public class WatchRunnable implements Runnable{
